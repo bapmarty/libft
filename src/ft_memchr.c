@@ -6,20 +6,20 @@
 /*   By: bapmarti <bapmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 13:26:23 by bapmarti          #+#    #+#             */
-/*   Updated: 2019/11/06 13:40:40 by bapmarti         ###   ########.fr       */
+/*   Updated: 2019/11/06 15:28:38 by bapmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-void	*ft_memchr(void *src, int c_in, size_t n)
+void	*ft_memchr(void *s, int c_in, size_t n)
 {
-	unsigned char c;
-	unsigned char *psrc;
+	unsigned char	c;
+	unsigned char	*p;
 
 	c = c_in;
-	while (*psrc != c && n-- > 0)
-		src++;
-	return (*psrc == c ? psrc : NULL);
-		
+	p = s;
+	while (*p != c && n-- > 0)
+		p++;
+	return (*p == c ? s : NULL);
 }
