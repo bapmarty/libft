@@ -1,7 +1,7 @@
 NAME	=	libft.a
 
 SRC		=	src/ft_atoi.c \
-SRC		=	src/ft_bzero.c \
+				src/ft_bzero.c \
 				src/ft_isalpha.c \
 				src/ft_isdigit.c \
 				src/ft_isalnum.c \
@@ -12,6 +12,8 @@ SRC		=	src/ft_bzero.c \
 				src/ft_strrchr.c \
 				src/ft_strncmp.c \
 				src/ft_memset.c \
+				src/ft_memchr.c \
+				src/ft_memccpy.c \
 				src/ft_memcpy.c
 
 OBJS	=	${SRC:.c=.o}
@@ -30,10 +32,10 @@ ${NAME}:	${OBJS}
 all: ${NAME}
 
 clean:
-${RM} ${OBJS}
+	${RM} ${OBJS}
 
 fclean: clean
-${RM} ${NAME}
+	${RM} ${NAME}
 
 re:		fclean all
 
