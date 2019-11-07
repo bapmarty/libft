@@ -3,19 +3,23 @@ NAME				=	libft.a
 SRC_PATH		= src/
 SRC_FILES		=	ft_atoi.c \
 							ft_bzero.c \
-							ft_isalpha.c \
-							ft_isdigit.c \
 							ft_isalnum.c \
+							ft_isalpha.c \
 							ft_isascii.c \
-							ft_toupper.c \
-							ft_tolower.c \
-							ft_strchr.c \
-							ft_strrchr.c \
-							ft_strncmp.c \
-							ft_memset.c \
-							ft_memchr.c \
+							ft_isdigit.c \
+							ft_isprint.c \
 							ft_memccpy.c \
-							ft_memcpy.c
+							ft_memchr.c \
+							ft_memcpy.c \
+							ft_memset.c \
+							ft_strchr.c \
+							ft_strlcpy.c \
+							ft_strlen.c \
+							ft_strncmp.c \
+							ft_strrchr.c \
+							ft_toupper.c \
+							ft_tolower.c 
+
 OBJ_PATH 		= obj/
 OBJS				=	$(addprefix $(OBJ_PATH), $(SRC_FILES))
 OBJS				:=	$(OBJS:.c=.o)
@@ -47,6 +51,6 @@ norm:
 
 test: all
 	$(CC) -I include -L . -l ft -o test src/main_test.c
-	./test
+	@ ./test
 
 .PHONY: all clean fclean re
