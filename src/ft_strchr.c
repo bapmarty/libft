@@ -6,15 +6,15 @@
 /*   By: bapmarti <bapmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 12:25:34 by bapmarti          #+#    #+#             */
-/*   Updated: 2019/11/06 08:58:22 by bapmarti         ###   ########.fr       */
+/*   Updated: 2019/11/07 11:22:17 by bapmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(char *s, char c)
+char	*ft_strchr(const char *s, char c)
 {
 	while (*s != c && *s != '\0')
 		s++;
-	if (*s == '\0')
-		return (0);
-	return (s);
+	if (*s == c)
+		return ((char *)s);
+	return (0);
 }

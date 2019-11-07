@@ -6,16 +6,18 @@
 /*   By: bapmarti <bapmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 12:09:20 by bapmarti          #+#    #+#             */
-/*   Updated: 2019/11/05 12:10:26 by bapmarti         ###   ########.fr       */
+/*   Updated: 2019/11/07 11:06:04 by bapmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(char *s)
-{
-	int i;
+#include "libft.h"
 
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
+size_t		ft_strlen(const char *s)
+{
+	size_t	size;
+
+	size = 0;
+	while (s[size] != '\0')
+		size++;
+	return (size);
 }

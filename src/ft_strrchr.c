@@ -6,20 +6,22 @@
 /*   By: bapmarti <bapmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 09:03:39 by bapmarti          #+#    #+#             */
-/*   Updated: 2019/11/06 10:46:56 by bapmarti         ###   ########.fr       */
+/*   Updated: 2019/11/07 11:19:17 by bapmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strrchr(char *s, char c)
+#include "libft.h"
+
+char	*ft_strrchr(const char *s, char c)
 {
-	int i;
+	size_t	i;
 
 	i = 0;
 	while (s[i] != '\0')
 		i++;
 	while (i > 0 && s[i] != c)
 		i--;
-	if (i == 0)
-		return (0);
-	return (s + i);
+	if (s[i] == c)
+		return ((char *)s + i);
+	return (0);
 }

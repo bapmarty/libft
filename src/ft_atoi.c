@@ -6,32 +6,31 @@
 /*   By: bapmarti <bapmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 08:00:16 by bapmarti          #+#    #+#             */
-/*   Updated: 2019/11/05 08:37:35 by bapmarti         ###   ########.fr       */
+/*   Updated: 2019/11/07 12:19:16 by bapmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_atoi(char *s)
+int		ft_atoi(const char *s)
 {
 	int nb;
 	int n;
-	int i;
 
-	i = 0;
 	n = 1;
-	while (s[i] == '\f' || s[i] == '\t' || s[i] == ' '
-			|| s[i] == '\v' || s[i] == '\r' || s[i] == '\n')
-		i++;
-	if (s[i] == '+')
-		i++;
-	if (s[i] == '-')
+	nb = 0;
+	while (*s == '\f' || *s == '\t' || *s == ' '
+			|| *s == '\v' || *s == '\r' || *s == '\n')
+		s++;
+	if (*s == '+')
+		s++;
+	if (*s == '-')
 	{
 		n = -1;
-		i++;
+		s++;
 	}
-	while (s[i] >= 48 && s[i] <= 57)
+	while (*s >= 48 && *s <= 57)
 	{
-		nb = nb * 10 + s[i] - 48;
-		i++;
+		nb = nb * 10 + *s - 48;
+		s++;
 	}
 	return (nb * n);
 }
