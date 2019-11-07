@@ -43,7 +43,7 @@ fclean: clean
 re:		fclean all
 
 norm:
-	norminette $(SRC_PATH) | grep -B1 Error | grep --color=always -E "Norme|$$"
+	@! norminette $(SRC_PATH)ft_*.c | grep -B1 "Error\|Warning" | grep --color=always -E "Norme|$$"
 
 test: all
 	$(CC) -I include -L . -l ft -o test src/main_test.c
