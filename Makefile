@@ -41,6 +41,9 @@ all: $(NAME)
 clean:
 	$(RM) $(OBJ_PATH)
 
+cltest:
+	$(RM) test
+
 fclean: clean
 	$(RM) $(NAME)
 
