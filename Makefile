@@ -1,37 +1,42 @@
-NAME				=	libft.a
+NAME			=	libft.a
 
-SRC_PATH		= src/
-SRC_FILES		=	ft_atoi.c \
-							ft_bzero.c \
-							ft_isalnum.c \
-							ft_isalpha.c \
-							ft_isascii.c \
-							ft_isdigit.c \
-							ft_isprint.c \
-							ft_memccpy.c \
-							ft_memchr.c \
-							ft_memcmp.c \
-							ft_memcpy.c \
-							ft_memset.c \
-							ft_strchr.c \
-							ft_strlcpy.c \
-							ft_strlen.c \
-							ft_strncmp.c \
-							ft_strrchr.c \
-							ft_toupper.c \
-							ft_tolower.c 
+SRC_PATH		=	src/
+SRC_FILES		=	ft_atoi.c		\
+					ft_bzero.c		\
+					ft_calloc.c		\
+					ft_isalnum.c	\
+					ft_isalpha.c	\
+					ft_isascii.c	\
+					ft_isdigit.c	\
+					ft_isprint.c	\
+					ft_memccpy.c	\
+					ft_memchr.c		\
+					ft_memcmp.c		\
+					ft_memcpy.c		\
+					ft_memmove.c	\
+					ft_memset.c		\
+					ft_strchr.c		\
+					ft_strdup.c		\
+					ft_strlcat.c	\
+					ft_strlcpy.c	\
+					ft_strlen.c		\
+					ft_strncmp.c	\
+					ft_strnstr.c	\
+					ft_strrchr.c	\
+					ft_toupper.c	\
+					ft_tolower.c 
 
 OBJ_PATH 		= obj/
-OBJS				=	$(addprefix $(OBJ_PATH), $(SRC_FILES))
-OBJS				:=	$(OBJS:.c=.o)
+OBJS			=	$(addprefix $(OBJ_PATH), $(SRC_FILES))
+OBJS			:=	$(OBJS:.c=.o)
 
-CC					=	cc
-RM					=	rm -rf
+CC				=	cc
+RM				=	rm -rf
 
 CFLAGS			=	-Wall -Wextra -Werror
 
 $(OBJ_PATH)%.o: $(SRC_PATH)%.c
-	mkdir -p $(OBJ_PATH)
+	@ mkdir -p $(OBJ_PATH)
 	$(CC) $(CFLAGS) -I include -c $< -o $(<:$(SRC_PATH)%.c=$(OBJ_PATH)%.o)
 
 $(NAME): $(OBJS)
@@ -51,10 +56,13 @@ fclean: clean
 re:		fclean all
 
 norm:
+	@ echo ============== NORMINETTE SRC ==============
 	@! norminette $(SRC_PATH)ft_*.c | grep -B1 "Error\|Warning" | grep --color=always -E "Norme|$$"
+	@ echo ============= NORMINETTE HEADER ============
+	@! norminette include/libft.h | grep -B1 "Error\|Warning" | grep --color=always -E "Norme|$$"
 
 test: all
 	$(CC) -I include -L . -l ft -o test src/main_test.c
-	@ ./test
+	./test
 
 .PHONY: all clean fclean re
