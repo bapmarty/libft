@@ -28,6 +28,7 @@ SRC_FILES		=	ft_atoi.c		\
 					ft_strncmp.c	\
 					ft_strnstr.c	\
 					ft_strrchr.c	\
+					ft_strtrim.c	\
 					ft_substr.c		\
 					ft_toupper.c	\
 					ft_tolower.c

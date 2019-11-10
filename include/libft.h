@@ -6,7 +6,7 @@
 /*   By: bapmarti <bapmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 12:10:54 by bapmarti          #+#    #+#             */
-/*   Updated: 2019/11/10 18:23:11 by bapmarti         ###   ########.fr       */
+/*   Updated: 2019/11/10 22:39:32 by bapmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ char	*ft_strrchr(const char *s, char c);
 char	*ft_strnstr(const char *hs, const char *ne, size_t len);
 char	*ft_substr(const char *s, unsigned int start, size_t len);
 char	*ft_strjoin(const char *s1, const char *s2);
+char	*ft_strtrim(const char *s1, const char *set);
+char	*ft_strdup(const char *s1);
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
