@@ -6,7 +6,7 @@
 /*   By: bapmarti <bapmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/12 12:28:13 by bapmarti          #+#    #+#             */
-/*   Updated: 2019/11/17 18:23:19 by bapmarti         ###   ########.fr       */
+/*   Updated: 2019/11/17 18:30:29 by bapmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,30 +23,40 @@ void	ft_check_neg(int *n, int *neg)
 		*neg = 0;
 }
 
+int		ft_size(int n)
+{
+	int	size;
+
+	size = 2;
+	while (n /= 10)
+		size++;
+	return (size);
+}
+
+char	*ft_write(int n, int size, int neg, char *s)
+{
+	s[--size] = 0;
+	while (size-- > 0)
+	{
+		s[size] = n % 10 + 48;
+		n /= 10;
+	}
+	if (neg)
+		s[0] = '-';
+	return (s);
+}
+
 char	*ft_itoa(int n)
 {
-	char	*str;
-	int		ncpy;
+	char	*s;
 	int		size;
 	int		neg;
 
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
 	ft_check_neg(&n, &neg);
-	ncpy = n;
-	size = 2;
-	while (ncpy /= 10)
-		++size;
-	size += neg;
-	if (!(str = (char*)malloc(sizeof(char) * size)))
+	size = ft_size(n) + neg;
+	if (!(s = (char*)malloc(sizeof(char) * size)))
 		return (NULL);
-	str[--size] = 0;
-	while (size-- > 0)
-	{
-		str[size] = n % 10 + 48;
-		n /= 10;
-	}
-	if (neg)
-		str[0] = '-';
-	return (str);
+	return (ft_write(n, size, neg, s));
 }
