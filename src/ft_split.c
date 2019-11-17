@@ -6,7 +6,7 @@
 /*   By: bapmarti <bapmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/15 12:12:44 by bapmarti          #+#    #+#             */
-/*   Updated: 2019/11/17 21:40:05 by bapmarti         ###   ########.fr       */
+/*   Updated: 2019/11/17 22:02:48 by bapmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int		ft_count_words(const char *s, char c)
 	if (s[i] && s[i] != c)
 		count++;
 	while (s[i])
-	{		
+	{
 		if (s[i] == c && (s[i + 1] != c && s[i + 1] != '\0'))
 			count++;
 		i++;
@@ -33,7 +33,7 @@ int		ft_count_words(const char *s, char c)
 int		ft_len_word(const char *s, char c, int pos)
 {
 	int i;
-	
+
 	i = 0;
 	while (s[i + pos] != c && s[i + pos])
 		i++;
