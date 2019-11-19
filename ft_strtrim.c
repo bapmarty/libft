@@ -6,13 +6,13 @@
 /*   By: bapmarti <bapmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/10 18:43:28 by bapmarti          #+#    #+#             */
-/*   Updated: 2019/11/10 22:41:55 by bapmarti         ###   ########.fr       */
+/*   Updated: 2019/11/19 15:18:17 by bapmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_find_char(char c, const char *set)
+static int		ft_find_char(char c, const char *set)
 {
 	int i;
 
@@ -26,7 +26,7 @@ int		ft_find_char(char c, const char *set)
 	return (0);
 }
 
-char	*ft_strtrim(const char *s1, const char *set)
+char			*ft_strtrim(const char *s1, const char *set)
 {
 	char	*str;
 	int		start;

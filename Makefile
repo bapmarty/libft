@@ -1,6 +1,6 @@
 NAME			=	libft.a
 
-SRC_PATH		=	src/
+SRC_PATH		=	./
 SRC_FILES		=	ft_atoi.c				\
 					ft_itoa.c				\
 					ft_bzero.c				\
@@ -47,7 +47,7 @@ SRC_BONUS_FILES	=	ft_lstnew_bonus.c		\
 					ft_lstmap_bonus.c	\
 
 
-OBJ_PATH 		=	obj/
+OBJ_PATH 		=	./
 OBJS			=	$(addprefix $(OBJ_PATH), $(SRC_FILES))
 OBJS			:=	$(OBJS:.c=.o)
 OBJS_BONUS		=	$(addprefix $(OBJ_PATH), $(SRC_BONUS_FILES))
@@ -73,7 +73,7 @@ bonus: $(OBJS) $(OBJS_BONUS)
 		ranlib $(NAME)
 
 clean:
-	$(RM) $(OBJ_PATH)
+	$(RM) *.o
 
 cltest:
 	$(RM) test
