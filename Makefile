@@ -87,7 +87,7 @@ norm:
 	@ echo ============== NORMINETTE SRC ==============
 	@! norminette $(SRC_PATH)ft_*.c | grep -B1 "Error\|Warning" | grep --color=always -E "Norme|$$"
 	@ echo ============= NORMINETTE HEADER ============
-	@! norminette include/*.h | grep -B1 "Error\|Warning" | grep --color=always -E "Norme|$$"
+	@! norminette *.h | grep -B1 "Error\|Warning" | grep --color=always -E "Norme|$$"
 
 test: all
 	$(CC) -I include -L . -l ft -o test src/main_test.c
