@@ -6,7 +6,7 @@
 /*   By: bapmarti <bapmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/15 12:12:44 by bapmarti          #+#    #+#             */
-/*   Updated: 2019/11/19 15:17:57 by bapmarti         ###   ########.fr       */
+/*   Updated: 2019/11/22 13:52:15 by bapmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,19 @@ static void		ft_write_word(const char *s, char *split, int pos, int size)
 	split[i] = '\0';
 }
 
+static void		*ft_free_arr(char **split)
+{
+	int i;
+
+	i = 0;
+	while (split[i])
+	{
+		free(split[i]);
+		i++;
+	}
+	return (NULL);
+}
+
 char			**ft_split(const char *s, char c)
 {
 	char		**split;
@@ -74,7 +87,7 @@ char			**ft_split(const char *s, char c)
 			pos++;
 		size = ft_len_word(s, c, pos);
 		if (!(split[i] = malloc(sizeof(char) * (size + 1))))
-			return (NULL);
+			return (ft_free_arr(split));
 		ft_write_word(s, split[i], pos, size);
 		pos = pos + size + 1;
 		i++;
