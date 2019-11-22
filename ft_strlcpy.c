@@ -6,7 +6,7 @@
 /*   By: bapmarti <bapmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 11:24:16 by bapmarti          #+#    #+#             */
-/*   Updated: 2019/11/17 21:41:04 by bapmarti         ###   ########.fr       */
+/*   Updated: 2019/11/22 14:18:06 by bapmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t	i;
 
 	i = 0;
+	if (!dest || !src)
+		return (0);
 	if (dstsize > 0)
 	{
 		while (src[i] && i < dstsize - 1)
