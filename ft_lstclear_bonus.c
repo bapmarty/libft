@@ -6,11 +6,11 @@
 /*   By: bapmarti <bapmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/15 11:15:36 by bapmarti          #+#    #+#             */
-/*   Updated: 2019/11/15 11:18:35 by bapmarti         ###   ########.fr       */
+/*   Updated: 2019/11/22 11:32:23 by bapmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_bonus.h"
+#include "libft.h"
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {

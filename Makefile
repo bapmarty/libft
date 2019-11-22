@@ -1,6 +1,5 @@
 NAME			=	libft.a
 
-SRC_PATH		=	./
 SRC_FILES		=	ft_atoi.c				\
 					ft_itoa.c				\
 					ft_bzero.c				\
@@ -42,25 +41,21 @@ SRC_BONUS_FILES	=	ft_lstnew_bonus.c		\
 					ft_lstsize_bonus.c		\
 					ft_lstlast_bonus.c		\
 					ft_lstdelone_bonus.c	\
-					ft_lstclear_bonus.c	\
-					ft_lstiter_bonus.c	\
-					ft_lstmap_bonus.c	\
+					ft_lstclear_bonus.c		\
+					ft_lstiter_bonus.c		\
+					ft_lstmap_bonus.c		\
 
 
-OBJ_PATH 		=	./
-OBJS			=	$(addprefix $(OBJ_PATH), $(SRC_FILES))
-OBJS			:=	$(OBJS:.c=.o)
-OBJS_BONUS		=	$(addprefix $(OBJ_PATH), $(SRC_BONUS_FILES))
-OBJS_BONUS		:=	$(OBJS_BONUS:.c=.o)
+OBJS			:=	$(SRC_FILES:.c=.o)
+OBJS_BONUS		:=	$(SRC_BONUS_FILES:.c=.o)
 
 CC				=	cc
 RM				=	rm -rf
 
 CFLAGS			=	-Wall -Wextra -Werror
 
-$(OBJ_PATH)%.o: $(SRC_PATH)%.c
-	@ mkdir -p $(OBJ_PATH)
-	$(CC) $(CFLAGS) -I include/ -o $@ -c $< 
+.c.o:
+	$(CC) $(CFLAGS) -I libft.h -o $@ -c $< 
 
 $(NAME): $(OBJS)
 		ar rcs $(NAME) $(OBJS)
@@ -73,24 +68,11 @@ bonus: $(OBJS) $(OBJS_BONUS)
 		ranlib $(NAME)
 
 clean:
-	$(RM) *.o
-
-cltest:
-	$(RM) test
+	$(RM) $(OBJS) $(OBJS_BONUS)
 
 fclean: clean
 	$(RM) $(NAME)
 
 re:		fclean all
 
-norm:
-	@ echo ============== NORMINETTE SRC ==============
-	@! norminette $(SRC_PATH)ft_*.c | grep -B1 "Error\|Warning" | grep --color=always -E "Norme|$$"
-	@ echo ============= NORMINETTE HEADER ============
-	@! norminette *.h | grep -B1 "Error\|Warning" | grep --color=always -E "Norme|$$"
-
-test: all
-	$(CC) -I include -L . -l ft -o test src/main_test.c
-	./test
-
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus

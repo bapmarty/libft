@@ -6,11 +6,11 @@
 /*   By: bapmarti <bapmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/13 18:10:42 by bapmarti          #+#    #+#             */
-/*   Updated: 2019/11/15 09:47:05 by bapmarti         ###   ########.fr       */
+/*   Updated: 2019/11/22 11:33:02 by bapmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_bonus.h"
+#include "libft.h"
 
 t_list	*ft_lstnew(void *content)
 {
