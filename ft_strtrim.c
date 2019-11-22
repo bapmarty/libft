@@ -6,7 +6,7 @@
 /*   By: bapmarti <bapmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/10 18:43:28 by bapmarti          #+#    #+#             */
-/*   Updated: 2019/11/19 15:18:17 by bapmarti         ###   ########.fr       */
+/*   Updated: 2019/11/22 13:39:37 by bapmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,19 +29,19 @@ static int		ft_find_char(char c, const char *set)
 char			*ft_strtrim(const char *s1, const char *set)
 {
 	char	*str;
-	int		start;
-	int		end;
+	size_t	start;
+	size_t	end;
 	int		i;
 
 	start = 0;
 	while (ft_find_char(s1[start], set))
 		start++;
+	if (start >= ft_strlen(s1))
+		return (ft_strdup(""));
 	end = ft_strlen(s1) - 1;
 	while (ft_find_char(s1[end], set))
 		end--;
 	end++;
-	if (end <= start)
-		return (ft_strdup(""));
 	if (!(str = malloc(sizeof(char) * (end - start + 1))))
 		return (NULL);
 	i = 0;

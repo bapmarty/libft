@@ -6,7 +6,7 @@
 /*   By: bapmarti <bapmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 12:29:49 by bapmarti          #+#    #+#             */
-/*   Updated: 2019/11/09 21:00:41 by bapmarti         ###   ########.fr       */
+/*   Updated: 2019/11/22 12:18:15 by bapmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n)
 	ps1 = (unsigned char *)s1;
 	ps2 = (unsigned char *)s2;
 	i = 0;
+	if (n == 0)
+		return (0);
 	while (*ps1 == *ps2 && ++i < n)
 	{
 		ps1++;
