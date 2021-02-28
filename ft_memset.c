@@ -6,7 +6,7 @@
 /*   By: bapmarti <bapmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 11:42:41 by bapmarti          #+#    #+#             */
-/*   Updated: 2019/11/06 15:24:10 by bapmarti         ###   ########.fr       */
+/*   Updated: 2021/02/28 21:25:02 by bapmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned char *p;
+	unsigned char	*p;
 
 	p = s;
 	while (n-- > 0)

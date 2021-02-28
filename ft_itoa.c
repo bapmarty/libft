@@ -6,13 +6,13 @@
 /*   By: bapmarti <bapmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/12 12:28:13 by bapmarti          #+#    #+#             */
-/*   Updated: 2019/11/19 15:16:03 by bapmarti         ###   ########.fr       */
+/*   Updated: 2021/02/28 21:20:34 by bapmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void		ft_check_neg(int *n, int *neg)
+static void	ft_check_neg(int *n, int *neg)
 {
 	if (*n < 0)
 	{
@@ -23,17 +23,20 @@ static void		ft_check_neg(int *n, int *neg)
 		*neg = 0;
 }
 
-static int		ft_size(int n)
+static int	ft_size(int n)
 {
 	int	size;
 
 	size = 2;
-	while (n /= 10)
+	while (n >= 10)
+	{
 		size++;
+		n /= 10;
+	}
 	return (size);
 }
 
-static char		*ft_write(int n, int size, int neg, char *s)
+static char	*ft_write(int n, int size, int neg, char *s)
 {
 	s[--size] = 0;
 	while (size-- > 0)
@@ -46,7 +49,7 @@ static char		*ft_write(int n, int size, int neg, char *s)
 	return (s);
 }
 
-char			*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char	*s;
 	int		size;
@@ -56,7 +59,8 @@ char			*ft_itoa(int n)
 		return (ft_strdup("-2147483648"));
 	ft_check_neg(&n, &neg);
 	size = ft_size(n) + neg;
-	if (!(s = (char*)malloc(sizeof(char) * size)))
+	s = (char*)malloc(sizeof(char) * size);
+	if (!(s))
 		return (NULL);
 	return (ft_write(n, size, neg, s));
 }

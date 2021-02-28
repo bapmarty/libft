@@ -82,4 +82,8 @@ fclean: clean
 
 re:		fclean all
 
+norm:
+	@norminette *.c
+	@norminette *.h
+
 .PHONY: all clean fclean re bonus

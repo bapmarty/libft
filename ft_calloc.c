@@ -6,7 +6,7 @@
 /*   By: bapmarti <bapmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/09 19:43:35 by bapmarti          #+#    #+#             */
-/*   Updated: 2019/11/09 19:55:36 by bapmarti         ###   ########.fr       */
+/*   Updated: 2021/02/28 21:09:48 by bapmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	void *p;
+	void	*p;
 
-	if (!(p = malloc(count * size)))
+	p = malloc(count * size);
+	if (!(p))
 		return (NULL);
 	return (ft_memset(p, 0, count * size));
 }

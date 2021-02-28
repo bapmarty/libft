@@ -6,7 +6,7 @@
 /*   By: bapmarti <bapmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/10 12:40:34 by bapmarti          #+#    #+#             */
-/*   Updated: 2020/02/24 15:48:33 by bapmarti         ###   ########.fr       */
+/*   Updated: 2021/02/28 21:35:09 by bapmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	size_t	j;
 	char	*str;
 
-	if (!(str = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1))))
+	str = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (!(str))
 		return (NULL);
 	i = 0;
 	while (s1[i])

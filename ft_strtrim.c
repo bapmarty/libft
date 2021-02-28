@@ -6,15 +6,15 @@
 /*   By: bapmarti <bapmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/10 18:43:28 by bapmarti          #+#    #+#             */
-/*   Updated: 2019/11/22 13:39:37 by bapmarti         ###   ########.fr       */
+/*   Updated: 2021/02/28 21:50:28 by bapmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		ft_find_char(char c, const char *set)
+static int	ft_find_char(char c, const char *set)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (set[i])
@@ -26,12 +26,11 @@ static int		ft_find_char(char c, const char *set)
 	return (0);
 }
 
-char			*ft_strtrim(const char *s1, const char *set)
+char	*ft_strtrim(const char *s1, const char *set)
 {
 	char	*str;
 	size_t	start;
 	size_t	end;
-	int		i;
 
 	start = 0;
 	while (ft_find_char(s1[start], set))
@@ -42,15 +41,15 @@ char			*ft_strtrim(const char *s1, const char *set)
 	while (ft_find_char(s1[end], set))
 		end--;
 	end++;
-	if (!(str = malloc(sizeof(char) * (end - start + 1))))
+	str = malloc(sizeof(char) * (end - start + 1));
+	if (!(str))
 		return (NULL);
-	i = 0;
 	while (start < end)
 	{
-		str[i] = s1[start];
-		i++;
+		*str = s1[start];
+		str++;
 		start++;
 	}
-	str[i] = '\0';
+	*str = '\0';
 	return (str);
 }

@@ -6,7 +6,7 @@
 /*   By: bapmarti <bapmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 12:10:54 by bapmarti          #+#    #+#             */
-/*   Updated: 2021/02/28 14:56:27 by baptistem        ###   ########.fr       */
+/*   Updated: 2021/02/28 21:54:48 by bapmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-typedef struct		s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;

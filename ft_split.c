@@ -6,16 +6,16 @@
 /*   By: bapmarti <bapmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/15 12:12:44 by bapmarti          #+#    #+#             */
-/*   Updated: 2019/11/22 13:52:15 by bapmarti         ###   ########.fr       */
+/*   Updated: 2021/02/28 21:30:39 by bapmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		ft_count_words(const char *s, char c)
+static int	ft_count_words(const char *s, char c)
 {
-	int		count;
-	int		i;
+	int	count;
+	int	i;
 
 	count = 0;
 	i = 0;
@@ -30,9 +30,9 @@ static int		ft_count_words(const char *s, char c)
 	return (count);
 }
 
-static int		ft_len_word(const char *s, char c, int pos)
+static int	ft_len_word(const char *s, char c, int pos)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (s[i + pos] != c && s[i + pos])
@@ -40,9 +40,9 @@ static int		ft_len_word(const char *s, char c, int pos)
 	return (i);
 }
 
-static void		ft_write_word(const char *s, char *split, int pos, int size)
+static void	ft_write_word(const char *s, char *split, int pos, int size)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (i < size)
@@ -54,9 +54,9 @@ static void		ft_write_word(const char *s, char *split, int pos, int size)
 	split[i] = '\0';
 }
 
-static void		*ft_free_arr(char **split)
+static void	*ft_free_arr(char **split)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (split[i])
@@ -67,29 +67,28 @@ static void		*ft_free_arr(char **split)
 	return (NULL);
 }
 
-char			**ft_split(const char *s, char c)
+char	**ft_split(const char *s, char c)
 {
-	char		**split;
-	int			nbwords;
-	int			pos;
-	int			size;
-	int			i;
+	char	**split;
+	int		nbwords;
+	int		pos;
+	int		i;
 
 	nbwords = ft_count_words(s, c);
-	if (!(split = malloc(sizeof(char *) * (nbwords + 1))))
+	split = malloc(sizeof(char *) * (nbwords + 1));
+	if (!(split))
 		return (NULL);
 	i = 0;
 	pos = 0;
-	size = 0;
 	while (i < nbwords)
 	{
 		while (s[pos] == c && s[pos])
 			pos++;
-		size = ft_len_word(s, c, pos);
-		if (!(split[i] = malloc(sizeof(char) * (size + 1))))
+		split[i] = malloc(sizeof(char) * (ft_len_word(s, c, pos) + 1));
+		if (!(split[i]))
 			return (ft_free_arr(split));
-		ft_write_word(s, split[i], pos, size);
-		pos = pos + size + 1;
+		ft_write_word(s, split[i], pos, ft_len_word(s, c, pos));
+		pos += ft_len_word(s, c, pos) + 1;
 		i++;
 	}
 	split[i] = NULL;

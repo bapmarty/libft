@@ -6,11 +6,11 @@
 /*   By: bapmarti <bapmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 11:21:11 by bapmarti          #+#    #+#             */
-/*   Updated: 2019/11/06 15:27:14 by bapmarti         ###   ########.fr       */
+/*   Updated: 2021/02/28 21:14:59 by bapmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
 	if (c >= 48 && c <= 57)
 		return (1);

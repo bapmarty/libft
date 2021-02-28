@@ -6,7 +6,7 @@
 /*   By: bapmarti <bapmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/21 20:54:51 by bapmarti          #+#    #+#             */
-/*   Updated: 2021/02/27 20:01:58 by bapmarti         ###   ########.fr       */
+/*   Updated: 2021/02/28 21:52:24 by bapmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	number_length(unsigned long long n, int b)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (n >= 1)
@@ -33,7 +33,8 @@ char	*ft_ulltoa_base(unsigned long long n, int b)
 
 	base = "0123456789ABCDEF";
 	digits = number_length(n, b) + 1;
-	if (!(res = ft_calloc(digits, digits)))
+	res = ft_calloc(digits, digits);
+	if (!(res))
 		return (NULL);
 	res[digits] = '\0';
 	digits--;

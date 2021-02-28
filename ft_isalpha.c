@@ -6,11 +6,11 @@
 /*   By: bapmarti <bapmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 09:03:58 by bapmarti          #+#    #+#             */
-/*   Updated: 2019/11/06 15:27:45 by bapmarti         ###   ########.fr       */
+/*   Updated: 2021/02/28 21:13:51 by bapmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
 	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
 		return (1);

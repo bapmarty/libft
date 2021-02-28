@@ -6,7 +6,7 @@
 /*   By: bapmarti <bapmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/09 13:10:17 by bapmarti          #+#    #+#             */
-/*   Updated: 2019/11/09 14:56:58 by bapmarti         ###   ########.fr       */
+/*   Updated: 2021/02/28 21:35:45 by bapmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t srclen;
-	size_t dstlen;
-	size_t i;
+	size_t	srclen;
+	size_t	dstlen;
+	size_t	i;
 
 	srclen = ft_strlen(src);
 	dstlen = ft_strlen(dst);

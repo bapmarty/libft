@@ -6,19 +6,19 @@
 /*   By: bapmarti <bapmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 08:00:16 by bapmarti          #+#    #+#             */
-/*   Updated: 2019/11/22 13:33:28 by bapmarti         ###   ########.fr       */
+/*   Updated: 2021/02/28 21:06:45 by bapmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_atoi(const char *s)
+int	ft_atoi(const char *s)
 {
-	int nb;
-	int n;
+	int	nb;
+	int	n;
 
 	n = 1;
 	nb = 0;
 	while (*s == '\f' || *s == '\t' || *s == ' '
-			|| *s == '\v' || *s == '\r' || *s == '\n')
+		|| *s == '\v' || *s == '\r' || *s == '\n')
 		s++;
 	if (*s == '+' || *s == '-')
 	{
