@@ -37,7 +37,9 @@ SRC_FILES		=	ft_atoi.c				\
 					ft_strtrim.c			\
 					ft_substr.c				\
 					ft_toupper.c			\
-					ft_tolower.c
+					ft_tolower.c			\
+					ft_utoa_base.c			\
+					ft_ulltoa_base.c
 
 SRC_BONUS_FILES	=	ft_lstnew_bonus.c		\
 					ft_lstadd_front_bonus.c	\

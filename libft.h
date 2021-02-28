@@ -6,7 +6,7 @@
 /*   By: bapmarti <bapmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 12:10:54 by bapmarti          #+#    #+#             */
-/*   Updated: 2020/02/13 00:42:38 by bapmarti         ###   ########.fr       */
+/*   Updated: 2021/02/28 14:54:25 by baptistem        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,8 @@ void				ft_lstiter(t_list *lst, void (*del)(void *));
 void				ft_lstclear(t_list **lst, void (*del)(void *));
 
 char				*ft_itoa(int n);
+char				*ft_utoa_base(unsigned int n, int b);
+char				*ft_ulltoa_base(unsigned long long n, int b);
 char				*ft_strchr(const char *s, char c);
 char				*ft_strrchr(const char *s, char c);
 char				*ft_strnstr(const char *hs, const char *ne, size_t len);
