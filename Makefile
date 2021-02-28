@@ -2,6 +2,7 @@ NAME			=	libft.a
 
 SRC_FILES		=	ft_atoi.c				\
 					ft_itoa.c				\
+					ft_utoa.c				\
 					ft_bzero.c				\
 					ft_calloc.c				\
 					ft_isalnum.c			\
