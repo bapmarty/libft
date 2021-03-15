@@ -113,7 +113,6 @@ norm:
 	@norminette -d print
 	@norminette -d setter
 	@norminette -d strings
-
 	@norminette -d includes
 
 .PHONY: all clean fclean re bonus
