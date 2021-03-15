@@ -6,7 +6,7 @@
 /*   By: bapmarti <bapmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/15 13:01:14 by bapmarti          #+#    #+#             */
-/*   Updated: 2021/03/15 13:08:31 by bapmarti         ###   ########.fr       */
+/*   Updated: 2021/03/15 13:43:44 by bapmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 char	*ft_strjoin_free(char *s1, const char *s2)
 {
-	size_t		i;
 	size_t		j;
 	size_t		len;
 	char		*tmp;
@@ -22,21 +21,22 @@ char	*ft_strjoin_free(char *s1, const char *s2)
 
 	tmp = s1;
 	len = ft_strlen(s1) + ft_strlen(s2);
-	if (!(str = malloc(sizeof(char) * (len + 1))))
+	str = malloc(sizeof(char) * (len + 1));
+	if (!(str))
 		return (NULL);
-	i = 0;
-	while (s1[i])
+	len = 0;
+	while (s1[len])
 	{
-		str[i] = s1[i];
-		i++;
+		str[len] = s1[len];
+		len++;
 	}
 	j = 0;
 	while (s2[j])
 	{
-		str[i + j] = s2[j];
+		str[len + j] = s2[j];
 		j++;
 	}
-	str[i + j] = '\0';
+	str[len + j] = '\0';
 	free(tmp);
 	return (str);
 }

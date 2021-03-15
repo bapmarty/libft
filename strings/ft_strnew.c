@@ -6,7 +6,7 @@
 /*   By: bapmarti <bapmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/15 13:01:56 by bapmarti          #+#    #+#             */
-/*   Updated: 2021/03/15 13:08:40 by bapmarti         ###   ########.fr       */
+/*   Updated: 2021/03/15 13:45:17 by bapmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ char	*ft_strnew(size_t size)
 	size_t	i;
 
 	i = 0;
-	if (!(s = malloc(sizeof(char) * (size + 1))))
+	s = malloc(sizeof(char) * (size + 1));
+	if (!(s))
 		return (NULL);
 	while (i < size)
 	{

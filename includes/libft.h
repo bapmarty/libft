@@ -6,7 +6,7 @@
 /*   By: bapmarti <bapmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 12:10:54 by bapmarti          #+#    #+#             */
-/*   Updated: 2021/03/15 13:04:20 by bapmarti         ###   ########.fr       */
+/*   Updated: 2021/03/15 13:45:50 by bapmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,6 @@ char				*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 char				*ft_strnew(size_t size);
 char				*ft_strjoin_free(char *s1, const char *s2);
 char				**ft_split(const char *s, char c);
-
 
 size_t				ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t				ft_strlcpy(char *dst, const char *src, size_t dstsize);
