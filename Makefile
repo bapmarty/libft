@@ -111,7 +111,6 @@ norm:
 	@norminette -d lists
 	@norminette -d memory
 	@norminette -d print
-	@norminette -d setter
 	@norminette -d strings
 	@norminette -d includes
 
