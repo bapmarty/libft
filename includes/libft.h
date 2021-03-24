@@ -6,7 +6,7 @@
 /*   By: bapmarti <bapmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 12:10:54 by bapmarti          #+#    #+#             */
-/*   Updated: 2021/03/24 17:17:07 by baptistem        ###   ########.fr       */
+/*   Updated: 2021/03/24 17:19:05 by baptistem        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ char				*ft_utoa_base(unsigned int n, int b);
 char				*ft_ulltoa_base(unsigned long long n, int b);
 char				*ft_strchr(const char *s, char c);
 char				*ft_strrchr(const char *s, char c);
+char				*ft_strstr(const char *hs, const char *ne);
 char				*ft_strnstr(const char *hs, const char *ne, size_t len);
 char				*ft_substr(const char *s, unsigned int start, size_t len);
 char				*ft_strjoin(const char *s1, const char *s2);
@@ -69,6 +70,7 @@ size_t				ft_strlen(const char *s);
 
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
+int					ft_strcmp(const char *s1, const char *s2);
 int					ft_atoi(const char *s);
 int					ft_isalnum(int c);
 int					ft_isalpha(int c);
