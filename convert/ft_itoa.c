@@ -6,7 +6,7 @@
 /*   By: bapmarti <bapmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/12 12:28:13 by bapmarti          #+#    #+#             */
-/*   Updated: 2021/02/28 21:20:34 by bapmarti         ###   ########.fr       */
+/*   Updated: 2021/03/24 17:12:46 by baptistem        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ static char	*ft_write(int n, int size, int neg, char *s)
 	return (s);
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	char	*s;
 	int		size;

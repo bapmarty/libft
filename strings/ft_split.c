@@ -6,7 +6,7 @@
 /*   By: bapmarti <bapmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/15 12:12:44 by bapmarti          #+#    #+#             */
-/*   Updated: 2021/02/28 21:30:39 by bapmarti         ###   ########.fr       */
+/*   Updated: 2021/03/24 17:14:34 by baptistem        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ static void	*ft_free_arr(char **split)
 	return (NULL);
 }
 
-char	**ft_split(const char *s, char c)
+char		**ft_split(const char *s, char c)
 {
 	char	**split;
 	int		nbwords;

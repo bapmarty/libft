@@ -6,7 +6,7 @@
 /*   By: bapmarti <bapmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/21 20:54:51 by bapmarti          #+#    #+#             */
-/*   Updated: 2021/02/28 21:52:53 by bapmarti         ###   ########.fr       */
+/*   Updated: 2021/03/24 17:13:37 by baptistem        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static int	number_length(unsigned int n, int b)
 	return (i);
 }
 
-char	*ft_utoa_base(unsigned int n, int b)
+char		*ft_utoa_base(unsigned int n, int b)
 {
 	int		digits;
 	char	*res;

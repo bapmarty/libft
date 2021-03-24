@@ -6,7 +6,7 @@
 /*   By: bapmarti <bapmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/10 18:43:28 by bapmarti          #+#    #+#             */
-/*   Updated: 2021/02/28 21:50:28 by bapmarti         ###   ########.fr       */
+/*   Updated: 2021/03/24 17:14:48 by baptistem        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static int	ft_find_char(char c, const char *set)
 	return (0);
 }
 
-char	*ft_strtrim(const char *s1, const char *set)
+char		*ft_strtrim(const char *s1, const char *set)
 {
 	char	*str;
 	size_t	start;

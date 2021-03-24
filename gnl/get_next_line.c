@@ -6,7 +6,7 @@
 /*   By: bapmarti <bapmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/22 18:01:13 by bapmarti          #+#    #+#             */
-/*   Updated: 2021/03/15 13:37:29 by baptistem        ###   ########.fr       */
+/*   Updated: 2021/03/24 17:13:56 by baptistem        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ static int	read_line(int fd, int ret, char *buf, char *str)
 	return (ret);
 }
 
-int	get_next_line(int fd, char **line)
+int			get_next_line(int fd, char **line)
 {
 	static char		*str;
 	char			*buf;

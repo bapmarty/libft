@@ -6,7 +6,7 @@
 /*   By: bapmarti <bapmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/21 10:33:39 by bapmarti          #+#    #+#             */
-/*   Updated: 2021/02/28 21:54:14 by bapmarti         ###   ########.fr       */
+/*   Updated: 2021/03/24 17:13:30 by baptistem        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ static char	*ft_write_neg(unsigned int n, unsigned int size, char *s)
 	return (s);
 }
 
-char	*ft_utoa(unsigned int n)
+char		*ft_utoa(unsigned int n)
 {
 	char				*s;
 	unsigned int		size;

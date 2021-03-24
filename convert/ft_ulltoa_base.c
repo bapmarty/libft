@@ -6,7 +6,7 @@
 /*   By: bapmarti <bapmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/21 20:54:51 by bapmarti          #+#    #+#             */
-/*   Updated: 2021/02/28 21:52:24 by bapmarti         ###   ########.fr       */
+/*   Updated: 2021/03/24 17:13:22 by baptistem        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static int	number_length(unsigned long long n, int b)
 	return (i);
 }
 
-char	*ft_ulltoa_base(unsigned long long n, int b)
+char		*ft_ulltoa_base(unsigned long long n, int b)
 {
 	int		digits;
 	char	*res;
